@@ -236,6 +236,7 @@ export default class PaginationBoxView extends Component {
              tabIndex="0"
              role="button"
              onKeyPress={this.handlePreviousPage}>
+            <i class='fa fa-caret-left arrow'></i>
             {previousLabel}
           </a>
         </li>
@@ -250,6 +251,7 @@ export default class PaginationBoxView extends Component {
              role="button"
              onKeyPress={this.handleNextPage}>
             {nextLabel}
+            <i class='fa fa-caret-right arrow'></i>
           </a>
         </li>
       </ul>
