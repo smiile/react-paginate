@@ -235,6 +235,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handlePreviousPage },
+            _react2.default.createElement('i', { className: 'fa fa-caret-left arrow' }),
             previousLabel
           )
         ),
@@ -250,7 +251,8 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handleNextPage },
-            nextLabel
+            nextLabel,
+            _react2.default.createElement('i', { className: 'fa fa-caret-right arrow' })
           )
         )
       );
