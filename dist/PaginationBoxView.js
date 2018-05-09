@@ -86,6 +86,11 @@ var PaginationBoxView = function (_Component) {
       var selected = _this.state.selected;
 
 
+      if (window.innerWidth < 420) {
+        items.push(_this.getPageElement(selected));
+        return items;
+      }
+
       if (pageCount <= pageRangeDisplayed) {
 
         for (var index = 0; index < pageCount; index++) {
@@ -199,6 +204,7 @@ var PaginationBoxView = function (_Component) {
         pageLinkClassName: pageLinkClassName,
         activeClassName: activeClassName,
         extraAriaContext: extraAriaContext,
+        pageCount: this.props.pageCount,
         href: this.hrefBuilder(index),
         page: index + 1 });
     }
@@ -235,8 +241,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handlePreviousPage },
-            _react2.default.createElement('i', { className: 'fa fa-caret-left arrow' }),
-            previousLabel
+            _react2.default.createElement('i', { className: 'fa fa-caret-left arrow' })
           )
         ),
         this.pagination(),

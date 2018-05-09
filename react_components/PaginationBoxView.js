@@ -133,6 +133,7 @@ export default class PaginationBoxView extends Component {
       pageLinkClassName={pageLinkClassName}
       activeClassName={activeClassName}
       extraAriaContext={extraAriaContext}
+      pageCount={this.props.pageCount}
       href={this.hrefBuilder(index)}
       page={index + 1} />
   }
@@ -148,6 +149,11 @@ export default class PaginationBoxView extends Component {
     } = this.props;
 
     const { selected } = this.state;
+
+    if (window.innerWidth < 420) {
+      items.push(this.getPageElement(selected));
+      return items;
+    }
 
     if (pageCount <= pageRangeDisplayed) {
 
@@ -237,7 +243,6 @@ export default class PaginationBoxView extends Component {
              role="button"
              onKeyPress={this.handlePreviousPage}>
             <i className='fa fa-caret-left arrow'></i>
-            {previousLabel}
           </a>
         </li>
 

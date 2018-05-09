@@ -41,7 +41,9 @@ var PageView = function PageView(props) {
         'aria-label': ariaLabel,
         'aria-current': ariaCurrent,
         onKeyPress: onClick },
-      props.page
+      props.page,
+      ' ',
+      window.innerWidth < 420 && ' / ' + props.pageCount
     )
   );
 };
