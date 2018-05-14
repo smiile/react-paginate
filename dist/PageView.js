@@ -47,7 +47,7 @@ var PageView = function PageView(props) {
         props.page
       ),
       ' ',
-      window.innerWidth < 420 && ' / ' + props.pageCount
+      window.outerWidth < 960 && ' / ' + props.pageCount
     )
   );
 };
