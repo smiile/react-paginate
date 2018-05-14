@@ -31,7 +31,7 @@ const PageView = (props) => {
              aria-label={ariaLabel}
              aria-current={ariaCurrent}
              onKeyPress={onClick}>
-            <span className="activePage">{props.page}</span> {window.innerWidth < 420 && ` / ${props.pageCount}`}
+            <span className="activePage">{props.page}</span> {window.outerWidth < 960 && ` / ${props.pageCount}`}
           </a>
       </li>
   )
