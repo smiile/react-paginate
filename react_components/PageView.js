@@ -22,8 +22,8 @@ const PageView = (props) => {
   }
 
   return (
-      <li className={cssClassName}>
-          <a onClick={onClick}
+      <li className={cssClassName} onClick={onClick}>
+          <a
              role="button"
              className={linkClassName}
              href={href}
