@@ -86,7 +86,7 @@ var PaginationBoxView = function (_Component) {
       var selected = _this.state.selected;
 
 
-      if (window.innerWidth < 420) {
+      if (window.innerWidth < 960) {
         items.push(_this.getPageElement(selected));
         return items;
       }
