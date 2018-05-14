@@ -235,8 +235,8 @@ export default class PaginationBoxView extends Component {
 
     return (
       <ul className={containerClassName}>
-        <li className={previousClasses}>
-          <a onClick={this.handlePreviousPage}
+        <li className={previousClasses} onClick={this.handlePreviousPage}>
+          <a
              className={previousLinkClassName}
              href={this.hrefBuilder(selected - 1)}
              tabIndex="0"
@@ -248,8 +248,8 @@ export default class PaginationBoxView extends Component {
 
         {this.pagination()}
 
-        <li className={nextClasses}>
-          <a onClick={this.handleNextPage}
+        <li className={nextClasses} onClick={this.handleNextPage}>
+          <a
              className={nextLinkClassName}
              href={this.hrefBuilder(selected + 1)}
              tabIndex="0"

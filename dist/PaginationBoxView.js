@@ -232,10 +232,10 @@ var PaginationBoxView = function (_Component) {
         { className: containerClassName },
         _react2.default.createElement(
           'li',
-          { className: previousClasses },
+          { className: previousClasses, onClick: this.handlePreviousPage },
           _react2.default.createElement(
             'a',
-            { onClick: this.handlePreviousPage,
+            {
               className: previousLinkClassName,
               href: this.hrefBuilder(selected - 1),
               tabIndex: '0',
@@ -247,10 +247,10 @@ var PaginationBoxView = function (_Component) {
         this.pagination(),
         _react2.default.createElement(
           'li',
-          { className: nextClasses },
+          { className: nextClasses, onClick: this.handleNextPage },
           _react2.default.createElement(
             'a',
-            { onClick: this.handleNextPage,
+            {
               className: nextLinkClassName,
               href: this.hrefBuilder(selected + 1),
               tabIndex: '0',
