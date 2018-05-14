@@ -150,7 +150,7 @@ export default class PaginationBoxView extends Component {
 
     const { selected } = this.state;
 
-    if (window.clientWidth < 960) {
+    if (window.outerWidth < 960) {
       items.push(this.getPageElement(selected));
       return items;
     }
