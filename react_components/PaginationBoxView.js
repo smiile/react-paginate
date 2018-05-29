@@ -243,7 +243,7 @@ export default class PaginationBoxView extends Component {
              role="button"
              onKeyPress={this.handlePreviousPage}>
             <i className='fa fa-caret-left arrow'></i>
-            <span>{this.state.selected > 0 && previousLabel}</span>
+            <span className="navigation">{this.state.selected > 0 && previousLabel}</span>
           </a>
         </li>
 
@@ -256,7 +256,7 @@ export default class PaginationBoxView extends Component {
              tabIndex="0"
              role="button"
              onKeyPress={this.handleNextPage}>
-            <span>{this.state.selected !== this.props.pageCount - 1 && nextLabel}</span>
+            <span className="navigation">{this.state.selected !== this.props.pageCount - 1 && nextLabel}</span>
             <i className='fa fa-caret-right arrow'></i>
           </a>
         </li>
