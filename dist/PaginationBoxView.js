@@ -245,7 +245,7 @@ var PaginationBoxView = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'navigation' },
-              this.state.selected > 0 && previousLabel
+              this.state.selected === pageCount - 1 && previousLabel
             )
           )
         ),
@@ -264,7 +264,7 @@ var PaginationBoxView = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'navigation' },
-              this.state.selected !== this.props.pageCount - 1 && nextLabel
+              this.state.selected !== pageCount - 1 && nextLabel
             ),
             _react2.default.createElement('i', { className: 'fa fa-caret-right arrow' })
           )
