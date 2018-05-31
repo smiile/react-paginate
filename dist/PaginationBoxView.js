@@ -28,6 +28,8 @@ var _BreakView2 = _interopRequireDefault(_BreakView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -215,6 +217,8 @@ var PaginationBoxView = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _classNames, _classNames2;
+
       var _props4 = this.props,
           disabledClassName = _props4.disabledClassName,
           previousClassName = _props4.previousClassName,
@@ -228,16 +232,8 @@ var PaginationBoxView = function (_Component) {
       var selected = this.state.selected;
 
 
-      var previousClasses = (0, _classnames2.default)({
-        previousClassName: previousClassName,
-        disabledClassName: selected === 0,
-        noLabel: selected !== pageCount - 1
-      });
-      var nextClasses = (0, _classnames2.default)({
-        nextClassName: nextClassName,
-        disabledClassName: selected === pageCount - 1,
-        noLabel: selected === pageCount - 1
-      });
+      var previousClasses = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, previousClassName, true), _defineProperty(_classNames, disabledClassName, selected === 0), _defineProperty(_classNames, 'noLabel', selected !== pageCount - 1), _classNames));
+      var nextClasses = (0, _classnames2.default)((_classNames2 = {}, _defineProperty(_classNames2, nextClassName, true), _defineProperty(_classNames2, disabledClassName, selected === pageCount - 1), _defineProperty(_classNames2, 'noLabel', selected === pageCount - 1), _classNames2));
 
       return _react2.default.createElement(
         'ul',
