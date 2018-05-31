@@ -14,6 +14,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _PageView = require('./PageView');
 
 var _PageView2 = _interopRequireDefault(_PageView);
@@ -224,8 +228,16 @@ var PaginationBoxView = function (_Component) {
       var selected = this.state.selected;
 
 
-      var previousClasses = previousClassName + (selected !== pageCount - 1 ? ' ' + disabledClassName : '');
-      var nextClasses = nextClassName + (selected === pageCount - 1 ? ' ' + disabledClassName : '');
+      var previousClasses = (0, _classnames2.default)({
+        previousClassName: previousClassName,
+        disabledClassName: selected === 0,
+        noLabel: selected !== pageCount - 1
+      });
+      var nextClasses = (0, _classnames2.default)({
+        nextClassName: nextClassName,
+        disabledClassName: selected === pageCount - 1,
+        noLabel: selected === pageCount - 1
+      });
 
       return _react2.default.createElement(
         'ul',
